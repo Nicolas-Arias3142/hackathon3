@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://drddthnowv62p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75j7s"]
+size = Vector2(90, 199.5)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_apn6k"]
+
+[node name="enemy" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(17, -82.25)
+shape = SubResource("RectangleShape2D_75j7s")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-508, -378)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+position = Vector2(-3, -0.75)
+rotation = 3.14159
+scale = Vector2(57.6743, 90.9657)
+mesh = SubResource("CapsuleMesh_apn6k")
